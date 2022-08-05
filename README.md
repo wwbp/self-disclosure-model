@@ -18,6 +18,12 @@ In addition to the multi-task models, we provide single-task models which perfor
 
 Please refer to the README's in the multi-task and single-task directories for specific usage guidelines.
 
+### Example Usage for inference using the multi-task RoBERTa model:
+
+```
+python inference.py  --model_path multi-task/roberta/full_model.p --csv_path data/test.csv --pool cls --embed
+```
+
 ## Data
 
 Our models were trained using data sets from previous works researching the within-corpora prediction of self-disclosure. They are being linked in the data folder for the reproducability of our model.
