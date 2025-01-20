@@ -48,6 +48,8 @@ then you can run
 python inference.py  --model_path multi-task/roberta/full_model.p --csv_path data/test.csv --pool cls --embed
 ```
 
+Finally, you can see an example run on Google Colab [here](https://colab.research.google.com/drive/1_mdapB76WAs-lmo0Qyd7tUsuyLr7d0bq).
+
 ## Data
 
 Our models were trained using data sets from previous works researching the within-corpora prediction of self-disclosure. They are being linked in the data folder for the reproducability of our model.
