@@ -20,6 +20,30 @@ Please refer to the README's in the multi-task and single-task directories for s
 
 ### Example Usage for inference using the multi-task RoBERTa model:
 
+Tested with:
+- python 3.9
+- pytorch 1.8
+
+`pip install -r requirements.txt`
+
+### Input Format
+Your input data must be in a CSV file with either:
+1. 768+ columns (The first 768 are treated as the Roberta embeddings)
+2. <768 columns (The first column is treated as a text entry)
+
+If your input data are in the format of the latter, the `--embed` flag must be passed to `inference.py` so that the text strings get converted to Roberta embeddings.
+
+Note if your csv contains a header, the `--header` flag must be passed to `inference.py` for correct processing.
+
+If you're like me and you like conda...
+```
+cd self-disclosure-model
+conda create --name self-disclosure python=3.9
+conda activate self-disclosure
+pip install -r requirements.txt
+export PYTHONPATH=$PWD
+```
+then you can run
 ```
 python inference.py  --model_path multi-task/roberta/full_model.p --csv_path data/test.csv --pool cls --embed
 ```
